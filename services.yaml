@@ -1,0 +1,5 @@
+- host: "rapier"
+  targets: 
+    - service: Pi
+      protocol: http
+      port: 8081
