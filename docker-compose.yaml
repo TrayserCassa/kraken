@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  kraken:
+    build: .
+    container_name: kraken
+    image: kraken 
+    ports:
+      - "5000:5000"
+    volumes:
+      - type: bind
+        source: ./config
+        target: /config
+
+    restart: unless-stopped

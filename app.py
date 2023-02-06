@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    with open("services.yaml", "r") as f:
+    with open("config/services.yaml", "r") as f:
         targets = yaml.safe_load(f)
 
     return render_template("main.html.j2", targets=targets)
